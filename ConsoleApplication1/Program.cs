@@ -26,11 +26,29 @@ namespace ConsoleApplication1
         }
         static void Main(string[] args)
         {
-            Calc2 c = new Calc2();
-            c.Minused += MinusedInvoked;
+            int[][] arr = new int[][]
+            {
+                new int[] { 1,2,3,4},
+                new int[] { 5,6,7,8},
+                new int[] { 9,10,11,12}
+            };
+            var itere = new Iterators();
+            var a = itere.F3(arr);
+            //foreach (var item in a)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            var arr2 = new int[] { 1, 2, 2, 4, 5, 6, 2, 12, 2, 178, 4};
+            var b = itere.F4(arr2);
+            foreach (var item in b)
+            {
+                Console.WriteLine(item);
+            }
+            //Calc2 c = new Calc2();
+            //c.Minused += MinusedInvoked;
 
-            Console.WriteLine(c.Plus(25, 20));
-            Console.WriteLine(c.Minus(-140, -20));
+            //Console.WriteLine(c.Plus(25, 20));
+            //Console.WriteLine(c.Minus(-140, -20));
             //D @delegate = F;
             //@delegate += G;
             //@delegate(10);
